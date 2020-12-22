@@ -1,0 +1,21 @@
+unsplash:
+  api:
+    url: localhost:8090
+  url: localhost:8090
+  token: testToken
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          unsplash:
+            client-id: JV4_fEdaoOO-r-VBd1yTFxOju8VAEtdCvWwBvrZU1FE
+            client-secret: 5KXC66TVZ8BkYK6ISXakRT6q9juPaxDI--oaK3xRIY0
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8090/login/oauth2/code/unsplash
+            scope: public, read_collections
+        provider:
+          unsplash:
+            authorization-uri: https://localhost:8090/oauth/authorize
+            token-uri: https://https://localhost:8090/oauth/token
